@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <queue>
-#include <iostream>
 
 using namespace std;
 
@@ -27,8 +26,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
         //answer[i]++;
         temp.pop();
         for(int j = 0; j < n; j++){
-            if(temp.empty()) break;
-            
+            if(temp.empty()) break;            
             if(temp.front() <= standard){
                 count++;
                 //answer[i]++;
@@ -37,7 +35,6 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
             else break;
         }
         answer.push_back(count);
-    }    
-    
+    }       
     return answer;
 }
