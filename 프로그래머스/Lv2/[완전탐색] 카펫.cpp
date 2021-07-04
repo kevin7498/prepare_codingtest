@@ -17,12 +17,10 @@ vector<int> solution(int brown, int yellow) {
 
     for(int i = 0; i < find.size(); i++){
         int h = find[i].first;
-        int w = find[i].second;
-        if(h - 2 > 0 && w - 2 > 0){
-            if((h - 2)*(w - 2) == yellow){
-                answer.push_back(w);
-                answer.push_back(h);
-            } 
+        int w = find[i].second;        
+        if((h - 2)*(w - 2) == yellow){
+            answer.push_back(w);
+            answer.push_back(h);    
         }
     }    
     return answer;
