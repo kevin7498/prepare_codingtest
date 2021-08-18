@@ -13,7 +13,7 @@ vector<string> solution(vector<string> record) {
     //map에 아이디 + 마지막 닉네임 뽑아서
     for(int i = record.size() - 1; i >= 0; i--){
         string text = record[i];
-        istringstream ss(text);
+        stringstream ss(text);
         string id, name;
         getline(ss, id, ' ');
         getline(ss, id, ' ');
@@ -24,7 +24,7 @@ vector<string> solution(vector<string> record) {
     
     for(int i = 0; i < record.size(); i++){
         string text = record[i];
-        istringstream ss(text);
+        stringstream ss(text);
         string command, id;
         getline(ss, command, ' ');
         getline(ss, id, ' ');
