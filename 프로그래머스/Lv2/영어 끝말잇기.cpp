@@ -27,14 +27,10 @@ vector<int> solution(int n, vector<string> words) {
     string last = "";
 
     for(int i = 0; i < words.size(); i++){
-        int person = (i + 1) % n;
+        int person = (i % n) + 1;
         int turn = (i / n) + 1;
         string now = words[i];
-        
-        if(person == 0){
-            person = n;
-        }
-        
+
         if(i == 0){
             list.push_back(now);
             last = now;
@@ -51,6 +47,6 @@ vector<int> solution(int n, vector<string> words) {
     }
     
     answer.push_back(0);
-    answer.push_back(0);      
+    answer.push_back(0);   
     return answer;
 }
